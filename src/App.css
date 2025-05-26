@@ -1,0 +1,19 @@
+@import "tailwindcss";
+#root {
+  padding-bottom: 2rem;
+}
+
+
+ .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/header.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/header.jpg");
+    background-position: 70%;
+    background-size: cover;
+    position: relative;
+  }
+  
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
