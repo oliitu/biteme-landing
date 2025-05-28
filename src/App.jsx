@@ -72,7 +72,7 @@ function App() {
   </div>
 </section>
 <div className=" flex items-center justify-center">
-    <motion.a whileTap={{ scale: 0.95 }} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
+    <motion.a whileTap={{ scale: 0.95 }} href="https://biteme-shop.netlify.app/" target="_blank" className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
   </div>
 
 
