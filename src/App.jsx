@@ -1,12 +1,36 @@
-import { useState } from 'react'
+import {useEffect, useState } from 'react'
 import './App.css'
 import Cookie from './components/Cookie'
 import Header from './components/Header'
-import{db} from './data/db'
+import{db as cookiesData } from './data/db'
 import { motion } from "framer-motion";
+import { db } from "./firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 function App() {
-  const[data,]=useState(db)
+  const [ruta, setRuta] = useState("");
+
+  useEffect(() => {
+    const fetchRuta = async () => {
+      try {
+        const docRef = doc(db, "misrutas", "2"); 
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setRuta(data.title); 
+        } else {
+          console.log("No se encontró el documento con ID 2");
+        }
+      } catch (error) {
+        console.error("Error al obtener la ruta:", error);
+      }
+    };
+
+    fetchRuta();
+  }, []);
+
+  const[data,]=useState(cookiesData)
   return (
     <>
     <Header/>
@@ -72,7 +96,7 @@ function App() {
   </div>
 </section>
 <div className=" flex items-center justify-center">
-    <motion.a whileTap={{ scale: 0.95 }} href="https://homebtm.netlify.app/" target="_blank" className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
+    <motion.a whileTap={{ scale: 0.95 }} href={ruta || "#"} className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
   </div>
 
 
