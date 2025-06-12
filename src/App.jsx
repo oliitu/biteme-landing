@@ -96,16 +96,15 @@ function App() {
   </div>
 </section>
 <div className=" flex items-center justify-center">
-    <motion.a whileTap={{ scale: 0.95 }} href={ruta || "#"} className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
+    <motion.a whileTap={{ scale: 0.95 }} href={ruta || "#"} className="text-white  bg-[#51290e] hover:bg-yellow-950 mt-4 rounded-full text-lg lg:text-2xl px-5 p-2.5 text-center" >Quiero mis cookies!</motion.a>
   </div>
 
 
 
 
-  <section id="productos" className="align-items-center pt-10 lg:pt-16 pb-6 lg:pb-16 px-6">
+  <section id="productos" className="align-items-center pt-10 lg:pt-10 pb-6 lg:pb-16 px-6">
   <div className="max-w-6xl mx-auto mt-6 text-center mb-10">
-    <h2 className="text-3xl md:text-4xl lg:text-6xl font-pacifico text-orange-950 mb-4">Nuestras Cookies</h2>
-    <p className="text-lg font-poppins text-orange-950">Elegí tu favorita y llevate 5 por $4000</p>
+    <h2 className="text-3xl md:text-4xl lg:text-6xl font-pacifico text-orange-950 mb-4">Catálogo</h2>
   </div>
 
 
