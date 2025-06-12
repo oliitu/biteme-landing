@@ -2,10 +2,13 @@ import {useEffect, useState } from 'react'
 import './App.css'
 import Cookie from './components/Cookie'
 import Header from './components/Header'
+import ResenasList from './components/ResenasList'
+import FormularioResena from './components/FormularioResena'
 import{db as cookiesData } from './data/db'
 import { motion } from "framer-motion";
 import { db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
+
 
 function App() {
   const [ruta, setRuta] = useState("");
@@ -118,7 +121,12 @@ function App() {
 </div>
 
 </section>
-
+ <section className='mt-9'>
+  <h3 className='text-2xl md:text-3xl lg:text-5xl font-pacifico font-bold text-orange-950 mb-8 ' >Reseñas de nuestros clientes</h3>
+    
+    <FormularioResena />
+  <ResenasList/>
+ </section>
   </main>
   <footer className="w-full bg-[#51290e] mt-10 pt-10 px-4">
   <div className="text-center">
